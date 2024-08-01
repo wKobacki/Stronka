@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+header nav button {
+    background-color: #fff;
+    color: #4CAF50;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+header nav button:hover {
+    background-color: #ddd;
+}
+
+main {
+    padding: 1rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 1rem;
+}
+
+form input, form textarea, form select {
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+form button {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+form button[type="button"] {
+    background-color: #f44336;
+    color: white;
+}
+
+form button[type="button"]:hover {
+    background-color: #d32f2f;
+}
+
+form button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+}
+
+form button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.idea {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 5px;
+}
+
+.idea h3 {
+    margin-top: 0;
+}
+
+.idea button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.idea button:hover {
+    background-color: #45a049;
+}
+
+.vote-count {
+    margin-left: 1rem;
+    font-weight: bold;
+}
