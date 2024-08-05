@@ -2,98 +2,216 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 header {
-    background-color: #4CAF50;
+    background-color: #333;
     color: white;
-    padding: 1rem;
+    padding: 10px 20px;
     text-align: center;
+    position: relative;
 }
 
-header nav button {
-    background-color: #fff;
-    color: #4CAF50;
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.logo {
+    height: 90px;
+}
+
+nav {
+    position: relative;
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+}
+
+nav .nav-left, nav .nav-right {
+    display: flex;
+    align-items: center;
+}
+
+nav button {
+    background-color: #d22b2b;
     border: none;
-    padding: 0.5rem 1rem;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+nav button:hover {
+    background-color: #a3261e;
+}
+
+nav .dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+nav .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+nav .dropdown-content button {
+    color: black;
+    padding: 12px 16px;
+    text-align: left;
+    background-color: white;
+    border: none;
     cursor: pointer;
 }
 
-header nav button:hover {
+nav .dropdown-content button:hover {
     background-color: #ddd;
 }
 
+nav .dropdown:hover .dropdown-content {
+    display: block;
+}
+
 main {
-    padding: 1rem;
+    padding: 20px;
 }
 
-section {
-    margin-bottom: 2rem;
+#categories {
+    text-align: center;
+    margin-top: 50px;
 }
 
-form {
+#categories button {
+    background-color: #d22b2b;
+    border: none;
+    color: white;
+    padding: 20px 40px;
+    cursor: pointer;
+    margin: 10px;
+    font-size: 1.2em;
+}
+
+#categories button:hover {
+    background-color: #a3261e;
+}
+
+#form-section {
+    margin: 50px auto;
+    max-width: 600px;
+}
+
+#form-section form {
     display: flex;
     flex-direction: column;
 }
 
-form label {
-    margin-top: 1rem;
+#form-section label {
+    margin-top: 10px;
 }
 
-form input, form textarea, form select {
-    padding: 0.5rem;
-    margin-top: 0.5rem;
+#form-section input, #form-section textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-form button {
-    margin-top: 1rem;
-    padding: 0.5rem;
+#form-section button {
+    background-color: #d22b2b;
+    border: none;
+    color: white;
+    padding: 10px;
     cursor: pointer;
+    margin-top: 20px;
 }
 
-form button[type="button"] {
-    background-color: #f44336;
-    color: white;
+#form-section button:hover {
+    background-color: #a3261e;
 }
 
-form button[type="button"]:hover {
-    background-color: #d32f2f;
-}
-
-form button[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-}
-
-form button[type="submit"]:hover {
-    background-color: #45a049;
+#ideas {
+    margin-top: 50px;
 }
 
 .idea {
-    border: 1px solid #ddd;
-    padding: 1rem;
-    margin: 1rem 0;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px 0;
     border-radius: 5px;
 }
 
 .idea h3 {
-    margin-top: 0;
+    margin: 0 0 10px;
 }
 
-.idea button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
+button {
     cursor: pointer;
 }
 
-.idea button:hover {
-    background-color: #45a049;
+.charts-window {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
 }
 
-.vote-count {
-    margin-left: 1rem;
-    font-weight: bold;
+.charts-window h2 {
+    margin-top: 0;
+}
+
+.button {
+    border-radius: 4px;
+    background-color: #f4511e;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px 30px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.5s;
+    text-transform: uppercase;
+    display: inline-block; 
+    margin: 10px; 
+}
+
+.button:hover {
+    background-color: rgb(189, 0, 0);
+}
+
+.button span {
+    display: inline-block;
+    transition: all 0.5s;
+}
+
+.button .first-child {
+    padding-left: 10px;
+}
+
+.button:hover .first-child {
+    padding-left: 0px;
+}
+
+.button .last-child {
+    opacity: 0;
+    transition: all 0.5s;
+    padding-left: 0px;
+}
+
+.button:hover .last-child {
+    opacity: 1;
+    padding-left: 10px;
 }
