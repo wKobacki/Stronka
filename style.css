@@ -119,11 +119,15 @@ main {
     margin-top: 10px;
 }
 
-#form-section input, #form-section textarea {
+#form-section input, #form-section textarea, #form-section select {
     padding: 10px;
     margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
+}
+
+#form-section input[type="file"] {
+    padding: 5px;
 }
 
 #form-section button {
@@ -141,6 +145,7 @@ main {
 
 #ideas {
     margin-top: 50px;
+    overflow: auto;
 }
 
 .idea {
@@ -148,14 +153,82 @@ main {
     padding: 20px;
     margin: 10px 0;
     border-radius: 5px;
+    overflow: auto;
+    word-wrap: break-word;
+    position: relative;
 }
 
 .idea h3 {
     margin: 0 0 10px;
 }
 
+.idea img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
 button {
     cursor: pointer;
+}
+
+.idea .vote-buttons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.idea .vote-buttons button {
+    background-color: #d22b2b;
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.idea .vote-buttons button:hover {
+    background-color: #a3261e;
+}
+
+.idea img.thumbnail {
+    max-width: 100px;
+    height: auto;
+    cursor: pointer;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+}
+
+.modal img {
+    max-width: 90%;
+    max-height: 90%;
+    border: 1px solid #fff;
+}
+
+.modal .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #fff;
+    color: #000;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
 }
 
 .charts-window {
@@ -184,8 +257,8 @@ button {
     position: relative;
     transition: all 0.5s;
     text-transform: uppercase;
-    display: inline-block; 
-    margin: 10px; 
+    display: inline-block;
+    margin: 10px;
 }
 
 .button:hover {
@@ -214,4 +287,30 @@ button {
 .button:hover .last-child {
     opacity: 1;
     padding-left: 10px;
+}
+
+.idea .status {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #f0ad4e;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.status-voting {
+    background-color: #5bc0de;
+}
+
+.status-in-progress {
+    background-color: #f0ad4e;
+}
+
+.status-completed {
+    background-color: #5cb85c;
+}
+
+.status-rejected {
+    background-color: #d9534f;
 }
