@@ -4,12 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Ideas</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/Style.css">
 </head>
 <body>
     <header>
         <div class="logo-container">
-            <img src="Images/logo-axell-logistics-fc-black-background.png" alt="Logo" class="logo">
+            <img src="../Images/logo-axell-logistics-fc-black-background.png" alt="Logo" class="logo">
+        </div>
+        <div class="language-selector">
+            <div class="dropdown">
+                <button class="dropbtn">
+                    <img src="../Images/UK.png" alt="Language" class="flag-icon"> <!-- Default flag -->
+                </button>
+                <div class="dropdown-content">
+                    <button onclick="changeLanguage('pl')"><img src="../Images/Poland.png" alt="PL" class="flag-icon"></button>
+                    <button onclick="changeLanguage('en')"><img src="../Images/UK.png" alt="EN" class="flag-icon"></button>
+                    <button onclick="changeLanguage('ua')"><img src="../Images/UKR.jpg" alt="UA" class="flag-icon"></button>
+                </div>
+            </div>
         </div>
     </header>
     <nav>
@@ -28,13 +40,25 @@
             </div>
         </div>
         <div class="nav-right">
-            <button onclick="window.location.href='login.html'">Logout</button>
+            <button onclick="logout()">Logout</button>
         </div>
     </nav>
     <main>
         <button class="show-form-btn" onclick="showForm()">Add Idea</button>
+
+        <!-- Sorting and Tabs -->
+        <div class="sorting-and-tabs">
+            <select id="sort-options" onchange="sortIdeas()">
+                <option value="votes">Sort by Votes</option>
+                <option value="date">Sort by Date</option>
+            </select>
+            <button onclick="showAllIdeas()">All problems</button>
+            <button onclick="showCompletedIdeas()">Fixed problems</button>
+        </div>
+
         <section id="form-section" style="display: none;">
             <form id="idea-form" enctype="multipart/form-data">
+                <!-- Form contents -->
                 <label for="title">Title:</label>
                 <input type="text" id="title" name="title" maxlength="55" required>
                 
@@ -54,10 +78,10 @@
                     <option value="Marketing">Marketing</option>
                 </select>
 
-                <label for="description">Description of your idea:</label>
+                <label for="description">Problem Description:</label>
                 <textarea id="description" name="description" rows="4" maxlength="1000" required></textarea>
 
-                <label for="solution">Implementation proposal:</label>
+                <label for="solution">Proposed Solution:</label>
                 <textarea id="solution" name="solution" rows="4" maxlength="1000" required></textarea>
 
                 <label for="images">Upload Images (up to 3):</label>
@@ -69,6 +93,7 @@
                 <button type="button" onclick="window.location.href='Category.html'">Cancel</button>
             </form>
         </section>
+        
         <div id="ideas-list"></div>
     </main>
     <div id="chartsWindow" class="charts-window" style="display: none;">
@@ -77,6 +102,6 @@
         <button onclick="closeCharts()">Close</button>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="script.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 </html>

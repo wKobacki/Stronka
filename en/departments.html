@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Departments</title>
+    <link rel="stylesheet" href="../css/Style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="../Images/logo-axell-logistics-fc-black-background.png" alt="logo" class="logo">
+        </div>
+        <div class="language-selector">
+            <div class="dropdown">
+                <button class="dropbtn">
+                    <img src="../Images/UK.png" alt="Language" class="flag-icon"> <!-- Default flag -->
+                </button>
+                <div class="dropdown-content">
+                    <button onclick="changeLanguage('pl')"><img src="../Images/Poland.png" alt="PL" class="flag-icon"></button>
+                    <button onclick="changeLanguage('en')"><img src="../Images/UK.png" alt="EN" class="flag-icon"></button>
+                    <button onclick="changeLanguage('ua')"><img src="../Images/UKR.jpg" alt="UA" class="flag-icon"></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav-left">
+            <div class="dropdown">
+                <button class="dropbtn">Axell Logistics</button>
+                <div class="dropdown-content">
+                    <button onclick="window.location.href='category.html'">Lyszkowice</button>
+                    <button onclick="window.location.href='category.html'">Skierniewice</button>
+                    <button onclick="window.location.href='category.html'">Nowy Tomysl</button>
+                    <button onclick="window.location.href='category.html'">Rakoniewice</button>
+                    <button onclick="window.location.href='category.html'">Gliwice</button>
+                </div>
+            </div>
+        </div>
+        <div class="nav-right">
+            <button onclick="logout()">Logout</button>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Main content can go here -->
+    </main>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

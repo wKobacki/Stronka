@@ -4,6 +4,7 @@ body {
     padding: 0;
 }
 
+/* Header styles */
 header {
     background-color: #333;
     color: white;
@@ -23,8 +24,8 @@ header {
     height: 90px;
 }
 
+/* Navigation styles */
 nav {
-    position: relative;
     background-color: #333;
     color: white;
     display: flex;
@@ -52,14 +53,26 @@ nav button:hover {
 }
 
 nav .dropdown {
-    display: inline-block;
     position: relative;
+    display: inline-block;
+}
+
+nav .dropdown .dropbtn {
+    background-color: #d22b2b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+nav .dropdown .dropbtn:hover {
+    background-color: #a3261e;
 }
 
 nav .dropdown-content {
     display: none;
     position: absolute;
-    background-color: white;
+    background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -72,6 +85,8 @@ nav .dropdown-content button {
     background-color: white;
     border: none;
     cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 nav .dropdown-content button:hover {
@@ -82,10 +97,12 @@ nav .dropdown:hover .dropdown-content {
     display: block;
 }
 
+/* Main content styles */
 main {
     padding: 20px;
 }
 
+/* Categories section styles */
 #categories {
     text-align: center;
     margin-top: 50px;
@@ -105,6 +122,7 @@ main {
     background-color: #a3261e;
 }
 
+/* Form section styles */
 #form-section {
     margin: 50px auto;
     max-width: 600px;
@@ -143,6 +161,7 @@ main {
     background-color: #a3261e;
 }
 
+/* Ideas section styles */
 #ideas {
     margin-top: 50px;
     overflow: auto;
@@ -200,6 +219,7 @@ button {
     border-radius: 5px;
 }
 
+/* Modal styles */
 .modal {
     display: none;
     position: fixed;
@@ -231,6 +251,7 @@ button {
     border-radius: 50%;
 }
 
+/* Charts window styles */
 .charts-window {
     position: fixed;
     top: 50%;
@@ -246,6 +267,7 @@ button {
     margin-top: 0;
 }
 
+/* Button styles */
 .button {
     border-radius: 4px;
     background-color: #f4511e;
@@ -289,6 +311,7 @@ button {
     padding-left: 10px;
 }
 
+/* Idea status styles */
 .idea .status {
     position: absolute;
     top: 10px;
@@ -313,4 +336,218 @@ button {
 
 .status-rejected {
     background-color: #d9534f;
+}
+
+/* Styles for login page */
+.login-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.login-container h2 {
+    margin: 0 0 20px;
+    text-align: center;
+    color: #333;
+}
+
+.login-container label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.login-container input {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-container button {
+    width: 100%;
+    background-color: #d22b2b;
+    border: none;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+
+.login-container button:hover {
+    background-color: #a3261e;
+}
+
+.login-container p {
+    text-align: center;
+}
+
+.login-container a {
+    color: #d22b2b;
+    text-decoration: none;
+}
+
+.login-container a:hover {
+    text-decoration: underline;
+}
+
+/* Register form styles */
+.register-container {
+    display: none; 
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.register-container h2 {
+    margin: 0 0 20px;
+    text-align: center;
+    color: #333;
+}
+
+.register-container label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.register-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.register-container button {
+    width: 100%;
+    background-color: #d22b2b;
+    border: none;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+
+.register-container button:hover {
+    background-color: #a3261e;
+}
+
+/* Language selector styles */
+.language-selector {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.language-selector .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.language-selector .dropbtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.language-selector .flag-icon {
+    width: 20px;
+    height: auto;
+    margin-right: 5px;
+}
+
+.language-selector .dropdown-content { 
+    display: none;
+    position: absolute;
+    background-color: #f3eeee; /*kolor-------------------------------------------------*/
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    right: 0;
+    top: 100%;
+    min-width: 160px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.language-selector .dropdown-content button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.language-selector .dropdown-content button:hover {
+    background-color: #ddd;
+}
+
+.language-selector .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    background-color: #d22b2b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.pagination button:hover {
+    background-color: #a3261e;
+}
+
+.pagination span {
+    margin: 0 10px;
+}
+
+/* Sorting and Tabs styles */
+.sorting-and-tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.sorting-and-tabs select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.sorting-and-tabs button {
+    background-color: #d22b2b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.sorting-and-tabs button:hover {
+    background-color: #a3261e;
 }

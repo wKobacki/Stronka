@@ -4,13 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Problem Charts</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/Style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <header>
         <div class="logo-container">
-            <img src="images/logo-axell-logistics-fc-black-background.png" alt="Logo" class="logo">
+            <img src="../images/logo-axell-logistics-fc-black-background.png" alt="Logo" class="logo">
+        </div>
+        <div class="language-selector">
+            <div class="dropdown">
+                <button class="dropbtn">
+                    <img src="../Images/UK.png" alt="Language" class="flag-icon"> <!-- Default flag -->
+                </button>
+                <div class="dropdown-content">
+                    <button onclick="changeLanguage('pl')"><img src="../Images/Poland.png" alt="PL" class="flag-icon"></button>
+                    <button onclick="changeLanguage('en')"><img src="../Images/UK.png" alt="EN" class="flag-icon"></button>
+                    <button onclick="changeLanguage('ua')"><img src="../Images/UKR.jpg" alt="UA" class="flag-icon"></button>
+                </div>
+            </div>
         </div>
     </header>
     <nav>
@@ -29,13 +41,13 @@
             </div>
         </div>
         <div class="nav-right">
-            <button onclick="window.location.href='login.html'">Logout</button>
+            <button onclick="logout()">Logout</button>
         </div>
     </nav>
     <main>
-        <h2>Problems Chart</h2>
+        <h2>Improvements Chart</h2>
         <canvas id="problemChart"></canvas>
     </main>
-    <script src="script.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 </html>

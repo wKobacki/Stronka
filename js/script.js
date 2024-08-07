@@ -58,9 +58,9 @@ function addIdeaToList(idea) {
         <p><strong>Description:</strong> ${idea.description}</p>
         <p><strong>Proposed Solution:</strong> ${idea.solution}</p>
         <div class="attachments">
-            ${idea.images.filter(image => image !== null).map((image, index) => `
-                <img src="${image}" alt="Idea Image" class="thumbnail" onclick="openModal('${image}')">
-            `).join('')}
+            ${idea.images.filter(image => image !== null).map((image, index) => 
+                `<img src="${image}" alt="Idea Image" class="thumbnail" onclick="openModal('${image}')">`
+            ).join('')}
         </div>
         <div class="vote-buttons">
             <button onclick="voteIdea(this)">Vote</button>
@@ -117,4 +117,60 @@ function getStatusClass(status) {
         default:
             return '';
     }
+}
+
+function logout() {
+    // Remove token from localStorage or sessionStorage
+    localStorage.removeItem('authToken'); // If using localStorage
+    // sessionStorage.removeItem('authToken'); // If using sessionStorage
+
+    // Redirect to login page
+    window.location.href = 'login.html';
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const loginForm = document.getElementById('login-form');
+    const registerForm = document.getElementById('register-form');
+
+    loginForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const emailOrPhone = document.getElementById('emailOrPhone').value;
+        const password = document.getElementById('password').value;
+
+        // Here you would typically send a request to your server to validate the user
+        console.log('Login with:', emailOrPhone, password);
+        
+        // Redirect to departments page after successful login
+        window.location.href = 'departments.html';
+    });
+
+    registerForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const newEmail = document.getElementById('newEmail').value;
+        const newPhone = document.getElementById('newPhone').value;
+        const newPassword = document.getElementById('newPassword').value;
+
+        // Here you would typically send a request to your server to create the user
+        console.log('Register with:', newEmail, newPhone, newPassword);
+        
+        // Switch to login form after successful registration
+        showLoginForm();
+    });
+});
+
+function showRegisterForm() {
+    document.getElementById('login-form').style.display = 'none';
+    document.getElementById('register-form').style.display = 'block';
+}
+
+function showLoginForm() {
+    document.getElementById('login-form').style.display = 'block';
+    document.getElementById('register-form').style.display = 'none';
+}
+
+function changeLanguage(languageCode) {
+    // Function to change language
+    console.log('Switching to language:', languageCode);
+    // Example of redirecting to a page in the selected language
+    // window.location.href = languageCode + '.html';
 }
