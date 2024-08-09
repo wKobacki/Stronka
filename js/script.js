@@ -1,6 +1,7 @@
 import { setupAuthForms, showLoginForm, showRegisterForm } from './forms/formHandlers.js';
 import { setupIdeaForm, setupIdeaList } from './utils/ui.js';
 import { addIdeaToList, voteIdea, openModal, closeModal } from './ideaList.js';
+import { changeLanguage } from './utils/language.js'; // Dodane importowanie funkcji changeLanguage
 
 function initialize() {
     setupAuthForms(); // For login and registration forms
@@ -13,10 +14,7 @@ initialize();
 // Expose functions globally to be used in HTML onclick attributes
 window.showLoginForm = showLoginForm;
 window.showRegisterForm = showRegisterForm;
-window.changeLanguage = (languageCode) => {
-    console.log('Switching to language:', languageCode);
-    // Implement language change logic here
-};
+window.changeLanguage = changeLanguage; // Dodane przypisanie funkcji changeLanguage
 window.logout = () => {
     localStorage.removeItem('authToken'); // Or sessionStorage if using sessionStorage
     window.location.href = 'login.html';
@@ -63,7 +61,6 @@ window.showRejectedIdeas = () => {
         idea.style.display = (status === 'Rejected') ? 'block' : 'none';
     });
 };
-
 window.showInProgresIdeas = () => {
     const ideas = document.querySelectorAll('.idea');
     ideas.forEach(idea => {

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проблеми</title>
+    <link rel="stylesheet" href="../../css/Style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="../../Images/logo-axell-logistics-fc-black-background.png" alt="Logo" class="logo">
+        </div>
+        <div class="language-selector">
+            <div class="dropdown">
+                <button class="dropbtn">
+                    <img src="../../Images/UKR.jpg" alt="Language" class="flag-icon"> 
+                </button>
+                <div class="dropdown-content">
+                    <button onclick="changeLanguage('pl')"><img src="../../Images/Poland.png" alt="PL" class="flag-icon"></button>
+                    <button onclick="changeLanguage('en')"><img src="../../Images/UK.png" alt="EN" class="flag-icon"></button>
+                    <button onclick="changeLanguage('ua')"><img src="../../Images/UKR.jpg" alt="UA" class="flag-icon"></button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <div class="nav-left">
+            <button onclick="window.location.href='category.html'">Домашня сторінка</button>
+            <button onclick="window.location.href='problem.html'">Проблеми</button>
+            <button onclick="window.location.href='improvment.html'">Покращення</button>
+            <button onclick="window.location.href='new.html'">Нова ідея</button>
+            <div class="dropdown">
+                <button>Діаграми</button>
+                <div class="dropdown-content">
+                    <button onclick="window.location.href='problemChart.html'">Проблеми</button>
+                    <button onclick="window.location.href='improvmentsChart.html'">Покращення</button>
+                    <button onclick="window.location.href='ideasChart.html'">Нова ідея</button>
+                </div>
+            </div>
+        </div>
+        <div class="nav-right">
+            <button onclick="logout()">Вийти</button>
+        </div>
+    </nav>
+    <main>
+        <button class="show-form-btn" onclick="showForm()">додати</button>
+
+        <!-- Sorting and Tabs -->
+        <div class="sorting-and-tabs">
+            <select id="sort-options" onchange="sortIdeas()">
+                <option value="votes">Сортувати за голосами</option>
+                <option value="date">Сортувати за датою</option>
+            </select>
+            <button onclick="showAllIdeas()">все</button>
+            <button onclick="showCompletedIdeas()">Виконано</button>
+            <button onclick="showRejectedIdeas()">Відхилено</button>
+            <button onclick="showInProgresIdeas()">В роботі</button>
+        </div>
+
+        <section id="form-section" style="display: none;">
+            <form id="idea-form" enctype="multipart/form-data">
+                <!-- Form contents -->
+                <label for="title">Назва:</label>
+                <input type="text" id="title" name="title" maxlength="55" required>
+                
+                <label for="department">Виберіть відділ:</label>
+                <select id="department" name="department" required>
+                    <option value="Unknow">не знаю</option>
+                    <option value="IT">IT</option>
+                    <option value="HR">HR</option>
+                    <option value="Finance">Фінанси</option>
+                    <option value="Biling">Розрахунковий відділ</option>
+                    <option value="Forwarding">Логістика</option>
+                    <option value="Customer Service">Обслуговування клієнтів</option>
+                    <option value="Werehouse Operation">Операційний менеджер</option>
+                    <option value="Werehouse Administration">Адміністрація складу</option>
+                    <option value="Value-added services">VAS</option>//poprawic------------------------------------------------------
+                    <option value="Administration">Адміністрація</option>
+                    <option value="Marketing">Маркетинг</option>
+                </select>
+
+                <label for="description">Опис проблеми:</label>
+                <textarea id="description" name="description" rows="4" maxlength="1000" required></textarea>
+
+                <label for="solution">Пропоноване рішення:</label>
+                <textarea id="solution" name="solution" rows="4" maxlength="1000" required></textarea>
+
+                <label for="images">Розмістити фото (максимум 3):</label>
+                <input type="file" id="image1" name="images" accept="image/*">
+                <input type="file" id="image2" name="images" accept="image/*">
+                <input type="file" id="image3" name="images" accept="image/*">
+
+                <button type="submit">Надіслати</button>
+                <button type="button" onclick="window.location.href='Category.html'">Скасувати</button>
+            </form>
+        </section>
+        
+        <div id="ideas-list"></div>
+    </main>
+    <div id="chartsWindow" class="charts-window" style="display: none;">
+        <h2>Діаграми</h2>
+        <canvas id="ideasChart"></canvas>
+        <button onclick="closeCharts()">Закрити</button>
+    </div>
+    <script type="module" src="../../js/script.js"></script>
+</body>
+</html>

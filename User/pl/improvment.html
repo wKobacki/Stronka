@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ulepszenia</title>
+    <link rel="stylesheet" href="../../css/Style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="../../Images/logo-axell-logistics-fc-black-background.png" alt="Logo" class="logo">
+        </div>
+        <div class="language-selector">
+            <div class="dropdown">
+                <button class="dropbtn">
+                    <img src="../../Images/Poland.png" alt="Language" class="flag-icon"> 
+                </button>
+                <div class="dropdown-content">
+                    <button onclick="changeLanguage('pl')"><img src="../../Images/Poland.png" alt="PL" class="flag-icon"></button>
+                    <button onclick="changeLanguage('en')"><img src="../../Images/UK.png" alt="EN" class="flag-icon"></button>
+                    <button onclick="changeLanguage('ua')"><img src="../../Images/UKR.jpg" alt="UA" class="flag-icon"></button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <div class="nav-left">
+            <button onclick="window.location.href='category.html'">Strona główna</button>
+            <button onclick="window.location.href='problem.html'">Problemy</button>
+            <button onclick="window.location.href='improvment.html'">Ulepszenia</button>
+            <button onclick="window.location.href='new.html'">Nowy pomysł</button>
+            <div class="dropdown">
+                <button>Wykresy</button>
+                <div class="dropdown-content">
+                    <button onclick="window.location.href='problemChart.html'">Problemy</button>
+                    <button onclick="window.location.href='improvmentsChart.html'">Ulepszenia</button>
+                    <button onclick="window.location.href='ideasChart.html'">Nowy pomysł</button>
+                </div>
+            </div>
+        </div>
+        <div class="nav-right">
+            <button onclick="logout()">Wyloguj się</button>
+        </div>
+    </nav>
+    <main>
+        <button class="show-form-btn" onclick="showForm()">Dodaj</button>
+
+        <!-- Sorting and Tabs -->
+        <div class="sorting-and-tabs">
+            <select id="sort-options" onchange="sortIdeas()">
+                <option value="votes">Sortuj po głosach</option>
+                <option value="date">Sortuj po dacie</option>
+            </select>
+            <button onclick="showAllIdeas()">Wszystkie</button>
+            <button onclick="showCompletedIdeas()">Ukonczone</button>
+            <button onclick="showRejectedIdeas()">Odrzucone</button>
+            <button onclick="showInProgresIdeas()">W trakcie realizacji</button>
+        </div>
+
+        <section id="form-section" style="display: none;">
+            <form id="idea-form" enctype="multipart/form-data">
+                <!-- Form contents -->
+                <label for="title">Tytuł:</label>
+                <input type="text" id="title" name="title" maxlength="55" required>
+                
+                <label for="department">Wybierz Dział:</label>
+                <select id="department" name="department" required>
+                    <option value="Unknow">Nie wiem</option>
+                    <option value="IT">IT</option>
+                    <option value="HR">HR</option>
+                    <option value="Finance">Finanse</option>
+                    <option value="Biling">Dział rozliczeń</option>
+                    <option value="Forwarding">Logistyka</option>
+                    <option value="Customer Service">Serwis klienta</option>
+                    <option value="Werehouse Operation">Kierownik operacyjny</option>
+                    <option value="Werehouse Administration">Administracja magazynu</option>
+                    <option value="Value-added services">VAS</option>
+                    <option value="Administration">Administracja</option>
+                    <option value="Marketing">Marketing</option>
+                </select>
+
+                <label for="description">Opis ulepszenia:</label>
+                <textarea id="description" name="description" rows="4" maxlength="1000" required></textarea>
+
+                <label for="solution">Proponowane rozwiązanie:</label>
+                <textarea id="solution" name="solution" rows="4" maxlength="1000" required></textarea>
+
+                <label for="images">Umieść zdjęcie (max 3):</label>
+                <input type="file" id="image1" name="images" accept="image/*">
+                <input type="file" id="image2" name="images" accept="image/*">
+                <input type="file" id="image3" name="images" accept="image/*">
+
+                <button type="submit">Wyślij</button>
+                <button type="button" onclick="window.location.href='Category.html'">Anuluj</button>
+            </form>
+        </section>
+        
+        <div id="ideas-list"></div>
+    </main>
+    <div id="chartsWindow" class="charts-window" style="display: none;">
+        <h2>Charts</h2>
+        <canvas id="ideasChart"></canvas>
+        <button onclick="closeCharts()">Zamknij</button>
+    </div>
+    <script type="module" src="../../js/script.js"></script>
+</body>
+</html>

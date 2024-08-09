@@ -4,29 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="../css/Style.css">
+    <link rel="stylesheet" href="../../css/Style.css">
 </head>
 <body>
     <header>
     <div class="logo-container">
-        <img src="../Images/logo-axell-logistics-fc-black-background.png" alt="logo" class="logo">
+        <img src="../../Images/logo-axell-logistics-fc-black-background.png" alt="logo" class="logo">
     </div>
     <div class="language-selector">
         <div class="dropdown">
             <button class="dropbtn">
-                <img src="../Images/UK.png" alt="Language" class="flag-icon"> <!-- Default flag -->
+                <img src="../../Images/UK.png" alt="Language" class="flag-icon"> <!-- Default flag -->
             </button>
             <div class="dropdown-content">
-                <button onclick="changeLanguage('pl')"><img src="../Images/Poland.png" alt="PL" class="flag-icon"></button>
-                <button onclick="changeLanguage('en')"><img src="../Images/UK.png" alt="EN" class="flag-icon"></button>
-                <button onclick="changeLanguage('ua')"><img src="../Images/UKR.jpg" alt="UA" class="flag-icon"></button>
+                <button onclick="changeLanguage('pl')"><img src="../../Images/Poland.png" alt="PL" class="flag-icon"></button>
+                <button onclick="changeLanguage('en')"><img src="../../Images/UK.png" alt="EN" class="flag-icon"></button>
             </div>
         </div>
     </div>
     </header>
     <nav>
         <div class="nav-left">
-            <button onclick="window.location.href='category.html'">Home</button>
+            <button onclick="window.location.href='departments.html'">Department</button>
+            <button onclick="window.location.href='category.html'">Category</button>
             <button onclick="window.location.href='problem.html'">Problem</button>
             <button onclick="window.location.href='improvment.html'">Improvement</button>
             <button onclick="window.location.href='new.html'">New Idea</button>
@@ -38,6 +38,8 @@
                     <button onclick="window.location.href='ideasChart.html'">New Ideas</button>
                 </div>
             </div>
+            <button onclick="window.location.href='stock.html'">Stock</button>
+            <button onclick="window.location.href='user.html'">Users</button>
         </div>
         <div class="nav-right">
             <button onclick="logout()">Logout</button>
@@ -58,7 +60,6 @@
         <canvas id="ideasChart"></canvas>
         <button onclick="closeCharts()">Close</button>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="../js/script.js"></script>
+    <script type="module" src="../../js/script.js"></script>
 </body>
 </html>

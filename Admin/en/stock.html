@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Improvements</title>
+    <link rel="stylesheet" href="../../css/Style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="../../images/Logo-Axell-Group-red.png" alt="Logo" class="logo">
+        </div>
+        <div class="language-selector">
+            <div class="dropdown">
+                <button class="dropbtn">
+                    <img src="../../images/UK.png" alt="Language" class="flag-icon"> <!-- Default flag -->
+                </button>
+                <div class="dropdown-content">
+                    <button onclick="changeLanguage('pl')"><img src="../../images/Poland.png" alt="PL" class="flag-icon"></button>
+                    <button onclick="changeLanguage('en')"><img src="../../images/UK.png" alt="EN" class="flag-icon"></button>
+                    <button onclick="changeLanguage('ua')"><img src="../../images/UKR.jpg" alt="UA" class="flag-icon"></button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <div class="nav-left">
+            <button onclick="window.location.href='departments.html'">Department</button>
+            <button onclick="window.location.href='category.html'">Category</button>
+            <button onclick="window.location.href='problem.html'">Problem</button>
+            <button onclick="window.location.href='improvements.html'">Improvement</button>
+            <button onclick="window.location.href='new.html'">New Idea</button>
+            <div class="dropdown">
+                <button>Show Charts</button>
+                <div class="dropdown-content">
+                    <button onclick="window.location.href='problemChart.html'">Problems</button>
+                    <button onclick="window.location.href='improvementsChart.html'">Improvements</button>
+                    <button onclick="window.location.href='ideasChart.html'">New Ideas</button>
+                </div>
+            </div>
+        </div>
+        <div class="nav-right">
+            <button onclick="logout()">Logout</button>
+        </div>
+    </nav>
+    <main>
+        <button class="show-form-btn" onclick="showForm()">Add Idea</button>
+
+        <!-- Sorting and Tabs -->
+        <div class="sorting-and-tabs">
+            <select id="sort-options" onchange="sortIdeas()">
+                <option value="votes">Sort by Votes</option>
+                <option value="date">Sort by Date</option>
+            </select>
+            <button onclick="showAllIdeas()">All Improvements</button>
+            <button onclick="showCompletedIdeas()">Completed Improvements</button>
+            <button onclick="showRejectedIdeas()">Rejected</button>
+            <button onclick="showInProgressIdeas()">In Progress</button>
+        </div>
+
+        <section id="idea-details" style="display: none;">
+            <h2 id="idea-title">Title</h2>
+            <p id="idea-description">Description</p>
+            <p id="idea-solution">Proposed Solution</p>
+            <div id="idea-images"></div>
+            
+            <div class="form-buttons">
+                <button type="button" onclick="acceptIdea()">Accept</button>
+                <button type="button" onclick="rejectIdea()">Reject</button>
+                <button type="button" onclick="closeIdeaDetails()">Close</button>
+            </div>
+        </section>
+
+        <div id="ideas-list">
+            <!-- Idea items will be displayed here -->
+        </div>
+    </main>
+    <div id="chartsWindow" class="charts-window" style="display: none;">
+        <h2>Charts</h2>
+        <canvas id="ideasChart"></canvas>
+        <button onclick="closeCharts()">Close</button>
+    </div>
+    <script type="module" src="../../js/script.js"></script>
+</body>
+</html>

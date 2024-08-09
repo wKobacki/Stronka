@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../../css/Style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-login">
+            <img src="../../images/Logo-Axell-Group-red.png" alt="Logo" class="logo">
+        </div>
+        <div class="language-selector">
+            <div class="dropdown">
+                <button class="dropbtn">
+                    <img src="../../images/UK.png" alt="Language" class="flag-icon"> 
+                </button>
+                <div class="dropdown-content">
+                    <button onclick="changeLanguage('pl')"><img src="../../images/Poland.png" alt="PL" class="flag-icon"></button>
+                    <button onclick="changeLanguage('en')"><img src="../../images/UK.png" alt="EN" class="flag-icon"></button>
+                    <button onclick="changeLanguage('ua')"><img src="../../images/UKR.jpg" alt="UA" class="flag-icon"></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="login-container">
+            <form id="login-form">
+                <h2>Login</h2>
+                <label for="emailOrPhone">Email or Phone</label>
+                <input type="text" id="emailOrPhone" name="emailOrPhone" required>
+                
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                
+                <button type="submit">Login</button>
+                <p>Don't have an account? <a href="javascript:void(0)" onclick="showRegisterForm()">Register here</a></p>
+            </form>
+            
+            <form id="register-form" style="display:none;">
+                <h2>Register</h2>
+                <label for="newEmail">Email</label>
+                <input type="email" id="newEmail" name="newEmail" required>
+                
+                <label for="newPhone">Phone</label>
+                <input type="text" id="newPhone" name="newPhone" required>
+                
+                <label for="newPassword">Password</label>
+                <input type="password" id="newPassword" name="newPassword" required>
+                
+                <button type="submit">Register</button>
+                <p>Already have an account? <a href="javascript:void(0)" onclick="showLoginForm()">Login here</a></p>
+            </form>
+        </div>
+    </main>
+
+    <script type="module" src="../../js/script.js"></script>
+    
+</body>
+</html>
