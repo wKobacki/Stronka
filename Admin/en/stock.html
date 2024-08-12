@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Improvements</title>
+    <title>Improvements Dashboard</title>
     <link rel="stylesheet" href="../../css/Style.css">
 </head>
 <body>
@@ -14,7 +14,7 @@
         <div class="language-selector">
             <div class="dropdown">
                 <button class="dropbtn">
-                    <img src="../../images/UK.png" alt="Language" class="flag-icon"> <!-- Default flag -->
+                    <img src="../../images/UK.png" alt="Language" class="flag-icon">
                 </button>
                 <div class="dropdown-content">
                     <button onclick="changeLanguage('pl')"><img src="../../images/Poland.png" alt="PL" class="flag-icon"></button>
@@ -45,42 +45,27 @@
         </div>
     </nav>
     <main>
-        <button class="show-form-btn" onclick="showForm()">Add Idea</button>
-
-        <!-- Sorting and Tabs -->
-        <div class="sorting-and-tabs">
-            <select id="sort-options" onchange="sortIdeas()">
-                <option value="votes">Sort by Votes</option>
-                <option value="date">Sort by Date</option>
-            </select>
-            <button onclick="showAllIdeas()">All Improvements</button>
-            <button onclick="showCompletedIdeas()">Completed Improvements</button>
-            <button onclick="showRejectedIdeas()">Rejected</button>
-            <button onclick="showInProgressIdeas()">In Progress</button>
-        </div>
-
-        <section id="idea-details" style="display: none;">
-            <h2 id="idea-title">Title</h2>
-            <p id="idea-description">Description</p>
-            <p id="idea-solution">Proposed Solution</p>
-            <div id="idea-images"></div>
-            
-            <div class="form-buttons">
-                <button type="button" onclick="acceptIdea()">Accept</button>
-                <button type="button" onclick="rejectIdea()">Reject</button>
-                <button type="button" onclick="closeIdeaDetails()">Close</button>
-            </div>
-        </section>
-
-        <div id="ideas-list">
-            <!-- Idea items will be displayed here -->
-        </div>
+        <h1>Ideas Stock</h1>
+        <table id="ideas-table">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Solution</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Ideas will be dynamically added here -->
+            </tbody>
+        </table>
+        <button onclick="addIdeaToTable({
+            id: 1, 
+            title: 'Example Idea', 
+            description: 'This is an example idea.', 
+            solution: 'Example solution'
+        })">Add Example Idea</button>
     </main>
-    <div id="chartsWindow" class="charts-window" style="display: none;">
-        <h2>Charts</h2>
-        <canvas id="ideasChart"></canvas>
-        <button onclick="closeCharts()">Close</button>
-    </div>
     <script type="module" src="../../js/script.js"></script>
 </body>
 </html>

@@ -1,3 +1,4 @@
+// js/utils/ui.js
 import { addIdeaToList } from '../ideaList.js';
 
 export function setupIdeaForm() {
@@ -6,7 +7,7 @@ export function setupIdeaForm() {
         console.error('Idea form not found');
         return;
     }
-    
+
     form.addEventListener('submit', (e) => {
         e.preventDefault();
 
@@ -48,7 +49,8 @@ export function setupIdeaForm() {
 
             addIdeaToList(idea);
             form.reset();
-            document.getElementById('form-section').style.display = 'none';
+            const formSection = document.getElementById('form-section');
+            if (formSection) formSection.style.display = 'none';
         });
     });
 }

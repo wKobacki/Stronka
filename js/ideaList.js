@@ -1,6 +1,25 @@
-// /js/ideaList.js
+export function addIdeaToTable(idea) {
+    const ideasList = document.getElementById('ideas-table').querySelector('tbody');
+    if (!ideasList) return;
+    
+    const row = document.createElement('tr');
+    row.dataset.id = idea.id;
+    row.innerHTML = `
+        <td>${idea.title}</td>
+        <td>${idea.description}</td>
+        <td>${idea.solution}</td>
+        <td>
+            <button onclick="acceptIdea(${idea.id})">Accept</button>
+            <button onclick="rejectIdea(${idea.id})">Reject</button>
+        </td>
+    `;
+    ideasList.appendChild(row);
+}
 
 export function addIdeaToList(idea) {
+    const ideasList = document.getElementById('ideas-list');
+    if (!ideasList) return;
+    
     const ideaElement = document.createElement('div');
     ideaElement.className = 'idea';
     ideaElement.innerHTML = `
@@ -10,7 +29,7 @@ export function addIdeaToList(idea) {
         <p><strong>Description:</strong> ${idea.description}</p>
         <p><strong>Proposed Solution:</strong> ${idea.solution}</p>
         <div class="attachments">
-            ${idea.images.filter(image => image !== null).map((image) => 
+            ${idea.images.filter(image => image).map(image => 
                 `<img src="${image}" alt="Idea Image" class="thumbnail" onclick="openModal('${image}')">`
             ).join('')}
         </div>
@@ -19,46 +38,41 @@ export function addIdeaToList(idea) {
             <span class="vote-count">${idea.votes}</span>
         </div>
     `;
-    document.getElementById('ideas-list').appendChild(ideaElement);
+    ideasList.appendChild(ideaElement);
 }
 
 export function voteIdea(button) {
-    const ideaElement = button.closest('.idea');
-    const countElement = ideaElement.querySelector('.vote-count');
-    let voteCount = parseInt(countElement.textContent);
-    voteCount++;
-    countElement.textContent = voteCount;
+    const voteCountElement = button.nextElementSibling;
+    let votes = parseInt(voteCountElement.textContent, 10);
+    votes += 1;
+    voteCountElement.textContent = votes;
 }
 
 export function openModal(imageSrc) {
-    const modal = document.createElement('div');
-    modal.className = 'modal';
-    modal.innerHTML = `
-        <img src="${imageSrc}" alt="Full Size Image">
-        <button class="close" onclick="closeModal()">X</button>
-    `;
-    document.body.appendChild(modal);
-    modal.style.display = 'flex';
+    const modal = document.getElementById('modal');
+    const modalImage = modal.querySelector('img');
+    modalImage.src = imageSrc;
+    modal.style.display = 'block';
 }
 
 export function closeModal() {
-    const modal = document.querySelector('.modal');
-    if (modal) {
-        document.body.removeChild(modal);
-    }
+    const modal = document.getElementById('modal');
+    modal.style.display = 'none';
+}
+
+export function acceptIdea(id) {
+    console.log('Idea accepted:', id);
+}
+
+export function rejectIdea(id) {
+    console.log('Idea rejected:', id);
 }
 
 function getStatusClass(status) {
-    switch(status) {
-        case 'Voting':
-            return 'status-voting';
-        case 'In Progress':
-            return 'status-in-progress';
-        case 'Completed':
-            return 'status-completed';
-        case 'Rejected':
-            return 'status-rejected';
-        default:
-            return '';
+    switch (status) {
+        case 'Completed': return 'completed';
+        case 'Rejected': return 'rejected';
+        case 'In Progress': return 'in-progress';
+        default: return '';
     }
 }
