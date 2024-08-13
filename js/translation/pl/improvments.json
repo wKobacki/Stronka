@@ -1,0 +1,30 @@
+{
+    "nav": {
+      "department": "Dział",
+      "category": "Kategoria",
+      "problem": "Problem",
+      "improvement": "Ulepszenie",
+      "newIdea": "Nowy Pomysł",
+      "showCharts": "Pokaż Wykresy",
+      "changePassword": "Zmień Hasło",
+      "logout": "Wyloguj"
+    },
+    "main": {
+      "addIdea": "Dodaj Pomysł",
+      "sortByVotes": "Sortuj według Głosów",
+      "sortByDate": "Sortuj według Daty",
+      "allImprovements": "Wszystkie Ulepszenia",
+      "completedImprovements": "Zakończone Ulepszenia",
+      "rejected": "Odrzucone",
+      "inProgress": "W Trakcie Realizacji"
+    },
+    "form": {
+      "title": "Tytuł:",
+      "selectDepartment": "Wybierz Dział:",
+      "description": "Opis Ulepszenia:",
+      "solution": "Proponowane Rozwiązanie:",
+      "uploadImages": "Prześlij Zdjęcia (do 3):",
+      "submitIdea": "Złóż Pomysł",
+      "cancel": "Anuluj"
+    }
+  }

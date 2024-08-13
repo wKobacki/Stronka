@@ -1,0 +1,20 @@
+{
+    "nav": {
+      "department": "Department",
+      "category": "Category",
+      "problem": "Problem",
+      "improvement": "Improvement",
+      "newIdea": "New Idea",
+      "showCharts": "Show Charts",
+      "changePassword": "Change Password",
+      "logout": "Logout"
+    },
+    "form": {
+      "title": "Change Password",
+      "oldPassword": "Old Password",
+      "newPassword": "New Password",
+      "confirmNewPassword": "Confirm New Password",
+      "submitButton": "Change Password"
+    }
+  }
+  

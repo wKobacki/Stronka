@@ -1,0 +1,20 @@
+{
+    "nav": {
+      "department": "Відділ",
+      "category": "Категорія",
+      "problem": "Проблема",
+      "improvement": "Покращення",
+      "newIdea": "Нова Ідея",
+      "showCharts": "Показати Графіки",
+      "changePassword": "Змінити Пароль",
+      "logout": "Вийти"
+    },
+    "form": {
+      "title": "Змінити Пароль",
+      "oldPassword": "Старий Пароль",
+      "newPassword": "Новий Пароль",
+      "confirmNewPassword": "Підтвердіть Новий Пароль",
+      "submitButton": "Змінити Пароль"
+    }
+  }
+  

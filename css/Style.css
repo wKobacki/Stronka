@@ -343,7 +343,7 @@ button {
     max-width: 400px;
     margin: 50px auto;
     padding: 20px;
-    border: 1px solid #ccc;
+    border: 2px solid #ccc;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: #fff;
@@ -440,6 +440,64 @@ button {
 
 .register-container button:hover {
     background-color: #a3261e;
+}
+
+/* Styles for password change page */
+.password-change {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.password-change h2 {
+    margin: 0 0 20px;
+    text-align: center;
+    color: #333;
+}
+
+.password-change label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.password-change input {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.password-change button {
+    width: 100%;
+    background-color: #d22b2b;
+    border: none;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+
+.password-change button:hover {
+    background-color: #a3261e;
+}
+
+.password-change p {
+    text-align: center;
+}
+
+.password-change a {
+    color: #d22b2b;
+    text-decoration: none;
+}
+
+.password-change a:hover {
+    text-decoration: underline;
 }
 
 /* Language selector styles */

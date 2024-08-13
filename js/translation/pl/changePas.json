@@ -1,0 +1,20 @@
+{
+    "nav": {
+      "department": "Dział",
+      "category": "Kategoria",
+      "problem": "Problem",
+      "improvement": "Ulepszenie",
+      "newIdea": "Nowy Pomysł",
+      "showCharts": "Pokaż Wykresy",
+      "changePassword": "Zmień Hasło",
+      "logout": "Wyloguj"
+    },
+    "form": {
+      "title": "Zmień Hasło",
+      "oldPassword": "Stare Hasło",
+      "newPassword": "Nowe Hasło",
+      "confirmNewPassword": "Potwierdź Nowe Hasło",
+      "submitButton": "Zmień Hasło"
+    }
+  }
+  

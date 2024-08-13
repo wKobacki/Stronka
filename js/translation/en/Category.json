@@ -1,0 +1,23 @@
+{
+    "nav": {
+      "department": "Department",
+      "category": "Category",
+      "problem": "Problem",
+      "improvement": "Improvement",
+      "newIdea": "New Idea",
+      "showCharts": "Show Charts",
+      "stock": "Stock",
+      "users": "Users",
+      "logout": "Logout"
+    },
+    "chartsWindow": {
+      "title": "Charts",
+      "close": "Close"
+    },
+    "categories": {
+      "problem": "Problem",
+      "improvement": "Improvement",
+      "newIdea": "New Idea"
+    }
+  }
+  

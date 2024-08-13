@@ -29,13 +29,13 @@
         <div class="login-container">
             <form id="login-form">
                 <h2>Логін</h2>
-                <label for="emailOrPhone">Електронна пошта або телефон</label>
-                <input type="text" id="emailOrPhone" name="emailOrPhone" required>
+                <label for="email">Електронна пошта</label>
+                <input type="email" id="email" name="email" required>
                 
                 <label for="password">Пароль</label>
                 <input type="password" id="password" name="password" required>
                 
-                <button type="submit">авторизуватися</button>
+                <button type="submit">увійти</button>
                 <p>Немає облікового запису? <a href="javascript:void(0)" onclick="showRegisterForm()">Зареєструватися тут</a></p>
             </form>
             
@@ -44,14 +44,26 @@
                 <label for="newEmail">Електронна пошта</label>
                 <input type="email" id="newEmail" name="newEmail" required>
                 
-                <label for="newPhone">Номер телефону</label>
-                <input type="text" id="newPhone" name="newPhone" required>
+                <label for="newName">Ім'я</label>
+                <input type="text" id="newName" name="newName" required>
+
+                <label for="newSurname">Прізвище</label>
+                <input type="text" id="newSurname" name="newSurname" required>
+
+                <label for="newBranch">Виберіть філію компанії:</label>
+                <select id="newBranch" name="newBranch" required>
+                    <option value="Teresin">Teresin</option>
+                    <option value="Lyszkowice">Lyszkowice</option>
+                    <option value="Skierniewice">Skierniewice</option>
+                    <option value="Rakoniewice">Rakoniewice</option>
+                    <option value="Gliwice">Gliwice</option>
+                </select>
                 
                 <label for="newPassword">Пароль</label>
                 <input type="password" id="newPassword" name="newPassword" required>
                 
                 <button type="submit">зареєструватися</button>
-                <p>Вже маєте акаунт? <a href="javascript:void(0)" onclick="showLoginForm()">Увійдіть тут</a></p>
+                <p>Ви вже маєте акаунт? <a href="javascript:void(0)" onclick="showLoginForm()">Увійдіть тут</a></p>
             </form>
         </div>
     </main>

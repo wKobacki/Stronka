@@ -16,6 +16,8 @@ initialize();
 window.showLoginForm = showLoginForm;
 window.showRegisterForm = showRegisterForm;
 window.changeLanguage = changeLanguage;
+window.showRegisterForm = showRegisterForm;
+
 window.logout = () => {
     localStorage.removeItem('authToken'); // Or sessionStorage if using sessionStorage
     window.location.href = 'login.html';
@@ -73,6 +75,17 @@ window.showInProgresIdeas = () => {
         idea.style.display = (status === 'In Progress') ? 'block' : 'none';
     });
 };
+
+window.showAllUser()
+{
+
+}
+
+window.showTooAccept()//osoby do zaakceptowania
+{
+
+}
+
 window.voteIdea = voteIdea;
 window.openModal = openModal;
 window.closeModal = closeModal;

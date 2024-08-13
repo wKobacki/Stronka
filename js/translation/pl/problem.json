@@ -1,0 +1,64 @@
+{
+    "header": {
+      "logoAlt": "Logo",
+      "languageButtons": {
+        "pl": "Polska",
+        "en": "EN",
+        "ua": "UA"
+      }
+    },
+    "nav": {
+      "department": "Dział",
+      "category": "Kategoria",
+      "problem": "Problem",
+      "improvement": "Ulepszenie",
+      "newIdea": "Nowy Pomysł",
+      "showCharts": {
+        "button": "Pokaż Wykresy",
+        "problems": "Problemy",
+        "improvements": "Ulepszenia",
+        "newIdeas": "Nowe Pomysły"
+      },
+      "changePassword": "Zmień hasło",
+      "logout": "Wyloguj się"
+    },
+    "main": {
+      "addIdeaButton": "Dodaj Pomysł",
+      "sortingAndTabs": {
+        "sortByVotes": "Sortuj według głosów",
+        "sortByDate": "Sortuj według daty",
+        "allProblems": "Wszystkie problemy",
+        "completed": "Zrealizowane",
+        "rejected": "Odrzucone",
+        "inProgress": "W trakcie"
+      },
+      "formSection": {
+        "title": "Tytuł:",
+        "selectDepartment": "Wybierz dział:",
+        "descriptionLabel": "Opis problemu:",
+        "solutionLabel": "Proponowane rozwiązanie:",
+        "uploadImages": "Załaduj obrazy (do 3):",
+        "submitIdea": "Prześlij Pomysł",
+        "cancel": "Anuluj",
+        "departments": {
+          "unknown": "Nieznany",
+          "it": "IT",
+          "hr": "HR",
+          "finance": "Finanse",
+          "billing": "Fakturowanie",
+          "forwarding": "Logistyka",
+          "customerService": "Obsługa Klienta",
+          "warehouseOperation": "Operacje magazynowe",
+          "warehouseAdministration": "Administracja magazynu",
+          "valueAddedServices": "Usługi dodane",
+          "administration": "Administracja",
+          "marketing": "Marketing"
+        }
+      }
+    },
+    "chartsWindow": {
+      "title": "Wykresy",
+      "closeButton": "Zamknij"
+    }
+  }
+  

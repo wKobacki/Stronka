@@ -1,0 +1,31 @@
+{
+    "nav": {
+      "department": "Department",
+      "category": "Category",
+      "problem": "Problem",
+      "improvement": "Improvement",
+      "newIdea": "New Idea",
+      "showCharts": "Show Charts",
+      "changePassword": "Change Password",
+      "logout": "Logout"
+    },
+    "main": {
+      "addIdea": "Add Idea",
+      "sortByVotes": "Sort by Votes",
+      "sortByDate": "Sort by Date",
+      "allImprovements": "All Improvements",
+      "completedImprovements": "Completed Improvements",
+      "rejected": "Rejected",
+      "inProgress": "In Progress"
+    },
+    "form": {
+      "title": "Title:",
+      "selectDepartment": "Select Department:",
+      "description": "Improvement Description:",
+      "solution": "Proposed Solution:",
+      "uploadImages": "Upload Images (up to 3):",
+      "submitIdea": "Submit Idea",
+      "cancel": "Cancel"
+    }
+  }
+  

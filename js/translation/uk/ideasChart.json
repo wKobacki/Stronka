@@ -1,0 +1,16 @@
+{
+    "nav": {
+      "department": "Відділ",
+      "category": "Категорія",
+      "problem": "Проблема",
+      "improvement": "Покращення",
+      "newIdea": "Нова Ідея",
+      "showCharts": "Показати Графіки",
+      "changePassword": "Змінити Пароль",
+      "logout": "Вийти"
+    },
+    "main": {
+      "title": "Графік Ідей"
+    }
+  }
+  

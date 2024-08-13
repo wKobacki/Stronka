@@ -1,0 +1,16 @@
+{
+    "nav": {
+      "department": "Dział",
+      "category": "Kategoria",
+      "problem": "Problem",
+      "improvement": "Ulepszenie",
+      "newIdea": "Nowy Pomysł",
+      "showCharts": "Pokaż Wykresy",
+      "changePassword": "Zmień Hasło",
+      "logout": "Wyloguj"
+    },
+    "main": {
+      "title": "Wykres Pomysłów"
+    }
+  }
+  

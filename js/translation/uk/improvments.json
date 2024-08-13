@@ -1,0 +1,31 @@
+  {
+    "nav": {
+      "department": "Відділ",
+      "category": "Категорія",
+      "problem": "Проблема",
+      "improvement": "Покращення",
+      "newIdea": "Нова Ідея",
+      "showCharts": "Показати Графіки",
+      "changePassword": "Змінити Пароль",
+      "logout": "Вийти"
+    },
+    "main": {
+      "addIdea": "Додати Ідею",
+      "sortByVotes": "Сортувати за Голосами",
+      "sortByDate": "Сортувати за Датою",
+      "allImprovements": "Усі Покращення",
+      "completedImprovements": "Завершені Покращення",
+      "rejected": "Відхилено",
+      "inProgress": "В Процесі"
+    },
+    "form": {
+      "title": "Назва:",
+      "selectDepartment": "Виберіть Відділ:",
+      "description": "Опис Покращення:",
+      "solution": "Пропоноване Рішення:",
+      "uploadImages": "Завантажити Зображення (до 3):",
+      "submitIdea": "Подати Ідею",
+      "cancel": "Скасувати"
+    }
+  }
+  

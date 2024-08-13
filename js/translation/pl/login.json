@@ -1,0 +1,37 @@
+{
+    "header": {
+      "loginLogoAlt": "Logo",
+      "languageButtons": {
+        "pl": "Polska",
+        "en": "EN",
+        "ua": "UA"
+      }
+    },
+    "main": {
+      "loginForm": {
+        "title": "Logowanie",
+        "emailLabel": "Email",
+        "passwordLabel": "Hasło",
+        "loginButton": "Zaloguj się",
+        "registerPrompt": "Nie masz konta? Zarejestruj się tutaj"
+      },
+      "registerForm": {
+        "title": "Rejestracja",
+        "emailLabel": "Email",
+        "nameLabel": "Imię",
+        "surnameLabel": "Nazwisko",
+        "branchLabel": "Wybierz oddział firmy:",
+        "passwordLabel": "Hasło",
+        "registerButton": "Zarejestruj się",
+        "loginPrompt": "Masz już konto? Zaloguj się tutaj",
+        "branches": {
+          "terisin": "Teresin",
+          "lyszkowice": "Lyszkowice",
+          "skierniewice": "Skierniewice",
+          "rakoniewice": "Rakoniewice",
+          "gliwice": "Gliwice"
+        }
+      }
+    }
+  }
+  

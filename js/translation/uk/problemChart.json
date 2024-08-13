@@ -1,0 +1,30 @@
+{
+    "header": {
+      "logoAlt": "Логотип",
+      "languageButtons": {
+        "pl": "Польща",
+        "en": "EN",
+        "ua": "UA"
+      }
+    },
+    "nav": {
+      "department": "Відділ",
+      "category": "Категорія",
+      "problem": "Проблема",
+      "improvement": "Поліпшення",
+      "newIdea": "Нова Ідея",
+      "showCharts": {
+        "button": "Показати Діаграми",
+        "problems": "Проблеми",
+        "improvements": "Поліпшення",
+        "newIdeas": "Нові Ідеї"
+      },
+      "changePassword": "Змінити пароль",
+      "logout": "Вийти"
+    },
+    "main": {
+      "pageTitle": "Діаграма Проблем",
+      "chartCanvasId": "problemChart"
+    }
+  }
+  

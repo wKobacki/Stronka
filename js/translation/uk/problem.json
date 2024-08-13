@@ -1,0 +1,64 @@
+{
+    "header": {
+      "logoAlt": "Логотип",
+      "languageButtons": {
+        "pl": "Польща",
+        "en": "EN",
+        "ua": "UA"
+      }
+    },
+    "nav": {
+      "department": "Відділ",
+      "category": "Категорія",
+      "problem": "Проблема",
+      "improvement": "Поліпшення",
+      "newIdea": "Нова Ідея",
+      "showCharts": {
+        "button": "Показати Діаграми",
+        "problems": "Проблеми",
+        "improvements": "Поліпшення",
+        "newIdeas": "Нові Ідеї"
+      },
+      "changePassword": "Змінити пароль",
+      "logout": "Вийти"
+    },
+    "main": {
+      "addIdeaButton": "Додати Ідею",
+      "sortingAndTabs": {
+        "sortByVotes": "Сортувати за голосами",
+        "sortByDate": "Сортувати за датою",
+        "allProblems": "Всі проблеми",
+        "completed": "Завершені",
+        "rejected": "Відхилені",
+        "inProgress": "В процесі"
+      },
+      "formSection": {
+        "title": "Назва:",
+        "selectDepartment": "Виберіть відділ:",
+        "descriptionLabel": "Опис проблеми:",
+        "solutionLabel": "Запропоноване рішення:",
+        "uploadImages": "Завантажити зображення (до 3):",
+        "submitIdea": "Надіслати Ідею",
+        "cancel": "Скасувати",
+        "departments": {
+          "unknown": "Невідомо",
+          "it": "IT",
+          "hr": "HR",
+          "finance": "Фінанси",
+          "billing": "Білінг",
+          "forwarding": "Логістика",
+          "customerService": "Обслуговування клієнтів",
+          "warehouseOperation": "Операції на складі",
+          "warehouseAdministration": "Адміністрація складу",
+          "valueAddedServices": "Додаткові послуги",
+          "administration": "Адміністрування",
+          "marketing": "Маркетинг"
+        }
+      }
+    },
+    "chartsWindow": {
+      "title": "Діаграми",
+      "closeButton": "Закрити"
+    }
+  }
+  

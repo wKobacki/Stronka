@@ -1,0 +1,30 @@
+{
+    "header": {
+      "logoAlt": "Logo",
+      "languageButtons": {
+        "pl": "Poland",
+        "en": "EN",
+        "ua": "UA"
+      }
+    },
+    "nav": {
+      "department": "Department",
+      "category": "Category",
+      "problem": "Problem",
+      "improvement": "Improvement",
+      "newIdea": "New Idea",
+      "showCharts": {
+        "button": "Show Charts",
+        "problems": "Problems",
+        "improvements": "Improvements",
+        "newIdeas": "New Ideas"
+      },
+      "changePassword": "Change password",
+      "logout": "Logout"
+    },
+    "main": {
+      "pageTitle": "Problems Chart",
+      "chartCanvasId": "problemChart"
+    }
+  }
+  

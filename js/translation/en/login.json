@@ -1,0 +1,37 @@
+{
+    "header": {
+      "loginLogoAlt": "Logo",
+      "languageButtons": {
+        "pl": "Poland",
+        "en": "EN",
+        "ua": "UA"
+      }
+    },
+    "main": {
+      "loginForm": {
+        "title": "Login",
+        "emailLabel": "Email",
+        "passwordLabel": "Password",
+        "loginButton": "Login",
+        "registerPrompt": "Don't have an account? Register here"
+      },
+      "registerForm": {
+        "title": "Register",
+        "emailLabel": "Email",
+        "nameLabel": "Name",
+        "surnameLabel": "Surname",
+        "branchLabel": "Select company branch:",
+        "passwordLabel": "Password",
+        "registerButton": "Register",
+        "loginPrompt": "Already have an account? Login here",
+        "branches": {
+          "terisin": "Teresin",
+          "lyszkowice": "Lyszkowice",
+          "skierniewice": "Skierniewice",
+          "rakoniewice": "Rakoniewice",
+          "gliwice": "Gliwice"
+        }
+      }
+    }
+  }
+  

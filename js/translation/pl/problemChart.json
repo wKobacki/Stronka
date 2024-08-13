@@ -1,0 +1,30 @@
+{
+    "header": {
+      "logoAlt": "Logo",
+      "languageButtons": {
+        "pl": "Polska",
+        "en": "EN",
+        "ua": "UA"
+      }
+    },
+    "nav": {
+      "department": "Dział",
+      "category": "Kategoria",
+      "problem": "Problem",
+      "improvement": "Ulepszenie",
+      "newIdea": "Nowy Pomysł",
+      "showCharts": {
+        "button": "Pokaż Wykresy",
+        "problems": "Problemy",
+        "improvements": "Ulepszenia",
+        "newIdeas": "Nowe Pomysły"
+      },
+      "changePassword": "Zmień hasło",
+      "logout": "Wyloguj się"
+    },
+    "main": {
+      "pageTitle": "Wykres Problemów",
+      "chartCanvasId": "problemChart"
+    }
+  }
+  

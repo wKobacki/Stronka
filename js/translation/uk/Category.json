@@ -1,0 +1,23 @@
+{
+    "nav": {
+      "department": "Відділ",
+      "category": "Категорія",
+      "problem": "Проблема",
+      "improvement": "Покращення",
+      "newIdea": "Нова Ідея",
+      "showCharts": "Показати Графіки",
+      "stock": "Запаси",
+      "users": "Користувачі",
+      "logout": "Вийти"
+    },
+    "chartsWindow": {
+      "title": "Графіки",
+      "close": "Закрити"
+    },
+    "categories": {
+      "problem": "Проблема",
+      "improvement": "Покращення",
+      "newIdea": "Нова Ідея"
+    }
+  }
+  

@@ -1,0 +1,64 @@
+{
+    "header": {
+      "logoAlt": "Logo",
+      "languageButtons": {
+        "pl": "Poland",
+        "en": "EN",
+        "ua": "UA"
+      }
+    },
+    "nav": {
+      "department": "Department",
+      "category": "Category",
+      "problem": "Problem",
+      "improvement": "Improvement",
+      "newIdea": "New Idea",
+      "showCharts": {
+        "button": "Show Charts",
+        "problems": "Problems",
+        "improvements": "Improvements",
+        "newIdeas": "New Ideas"
+      },
+      "changePassword": "Change password",
+      "logout": "Logout"
+    },
+    "main": {
+      "addIdeaButton": "Add Idea",
+      "sortingAndTabs": {
+        "sortByVotes": "Sort by Votes",
+        "sortByDate": "Sort by Date",
+        "allProblems": "All problems",
+        "completed": "Completed",
+        "rejected": "Rejected",
+        "inProgress": "In progress"
+      },
+      "formSection": {
+        "title": "Title:",
+        "selectDepartment": "Select Department:",
+        "descriptionLabel": "Problem Description:",
+        "solutionLabel": "Proposed Solution:",
+        "uploadImages": "Upload Images (up to 3):",
+        "submitIdea": "Submit Idea",
+        "cancel": "Cancel",
+        "departments": {
+          "unknown": "Unknown",
+          "it": "IT",
+          "hr": "HR",
+          "finance": "Finance",
+          "billing": "Billing",
+          "forwarding": "Logistic",
+          "customerService": "Customer Service",
+          "warehouseOperation": "Warehouse Operation",
+          "warehouseAdministration": "Warehouse Administration",
+          "valueAddedServices": "Value-added services",
+          "administration": "Administration",
+          "marketing": "Marketing"
+        }
+      }
+    },
+    "chartsWindow": {
+      "title": "Charts",
+      "closeButton": "Close"
+    }
+  }
+  

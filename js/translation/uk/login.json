@@ -1,0 +1,37 @@
+{
+    "header": {
+      "loginLogoAlt": "Логотип",
+      "languageButtons": {
+        "pl": "Польща",
+        "en": "EN",
+        "ua": "UA"
+      }
+    },
+    "main": {
+      "loginForm": {
+        "title": "Увійти",
+        "emailLabel": "Електронна пошта",
+        "passwordLabel": "Пароль",
+        "loginButton": "Увійти",
+        "registerPrompt": "Немає акаунту? Зареєструйтесь тут"
+      },
+      "registerForm": {
+        "title": "Реєстрація",
+        "emailLabel": "Електронна пошта",
+        "nameLabel": "Ім'я",
+        "surnameLabel": "Прізвище",
+        "branchLabel": "Виберіть філію компанії:",
+        "passwordLabel": "Пароль",
+        "registerButton": "Зареєструватися",
+        "loginPrompt": "Вже є акаунт? Увійти тут",
+        "branches": {
+          "terisin": "Терезін",
+          "lyszkowice": "Лишковиці",
+          "skierniewice": "Скерневиці",
+          "rakoniewice": "Раконевиці",
+          "gliwice": "Гливиці"
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,28 @@
+{
+    "nav": {
+      "department": "Dział",
+      "category": "Kategoria",
+      "problem": "Problem",
+      "improvement": "Ulepszenie",
+      "newIdea": "Nowy Pomysł",
+      "showCharts": "Pokaż Wykresy",
+      "stock": "Giełda",
+      "users": "Użytkownicy",
+      "logout": "Wyloguj"
+    },
+    "dropdown": {
+      "problems": "Problemy",
+      "improvements": "Ulepszenia",
+      "newIdeas": "Nowe Pomysły"
+    },
+    "chartsWindow": {
+      "title": "Wykresy",
+      "close": "Zamknij"
+    },
+    "categories": {
+      "problem": "Problem",
+      "improvement": "Ulepszenie",
+      "newIdea": "Nowy Pomysł"
+    }
+  }
+  
