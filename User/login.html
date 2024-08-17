@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" data-page="login">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate-key="login.title">Login</title>
+    <link rel="stylesheet" href="../../css/Style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-login">
+            <img src="../../images/Logo-Axell-Group-red.png" alt="Logo" class="logo">
+        </div>
+        <div class="language-selector">
+            <div class="dropdown">
+                <button class="dropbtn">
+                    <img src="../../images/UK.png" alt="Language" class="flag-icon"> 
+                </button>
+                <div class="dropdown-content">
+                    <button onclick="changeLanguage('pl')"><img src="../../images/Poland.png" alt="PL" class="flag-icon"></button>
+                    <button onclick="changeLanguage('en')"><img src="../../images/UK.png" alt="EN" class="flag-icon"></button>
+                    <button onclick="changeLanguage('ua')"><img src="../../images/UKR.jpg" alt="UA" class="flag-icon"></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="login-container">
+            <form id="login-form">
+                <h2 data-translate-key="login.formTitle">Login</h2>
+                <label for="email" data-translate-key="login.emailLabel">Email</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="password" data-translate-key="login.passwordLabel">Password</label>
+                <input type="password" id="password" name="password" required>
+                
+                <button type="submit" data-translate-key="login.loginButton">Login</button>
+                <p data-translate-key="login.registerPrompt">Don't have an account? <a href="javascript:void(0)" onclick="showRegisterForm()" data-translate-key="login.registerLink">Register here</a></p>
+            </form>
+            
+            <form id="register-form" style="display:none;">
+                <h2 data-translate-key="register.formTitle">Register</h2>
+                <label for="newEmail" data-translate-key="register.emailLabel">Email</label>
+                <input type="email" id="newEmail" name="newEmail" required>
+                
+                <label for="newName" data-translate-key="register.nameLabel">Name</label>
+                <input type="text" id="newName" name="newName" required>
+
+                <label for="newSurname" data-translate-key="register.surnameLabel">Surname</label>
+                <input type="text" id="newSurname" name="newSurname" required>
+
+                <label for="newBranch" data-translate-key="register.branchLabel">Select company branch:</label>
+                <select id="newBranch" name="newBranch" required data-translate-options="register.branches">
+                    <option value="Teresin" data-translate-option="register.branches.Teresin">Teresin</option>
+                    <option value="Lyszkowice" data-translate-option="register.branches.Lyszkowice">Lyszkowice</option>
+                    <option value="Skierniewice" data-translate-option="register.branches.Skierniewice">Skierniewice</option>
+                    <option value="Rakoniewice" data-translate-option="register.branches.Rakoniewice">Rakoniewice</option>
+                    <option value="Gliwice" data-translate-option="register.branches.Gliwice">Gliwice</option>
+                </select>
+                
+                <label for="newPassword" data-translate-key="register.passwordLabel">Password</label>
+                <input type="password" id="newPassword" name="newPassword" required>
+                
+                <button type="submit" data-translate-key="register.registerButton">Register</button>
+                <p data-translate-key="register.loginPrompt">Already have an account? <a href="javascript:void(0)" onclick="showLoginForm()" data-translate-key="register.loginLink">Login here</a></p>
+            </form>
+        </div>
+    </main>
+
+    <script type="module" src="../js/script.js"></script>
+    <script type="module" src="../js/language.js"></script>
+    <script type="module">
+        // Domyślny język lub język z lokalnego storage
+        changeLanguage('en'); // Możesz zmienić na dynamiczne ustawienie
+    </script>
+</body>
+</html>

@@ -1,4 +1,3 @@
-// js/script.js
 import { setupAuthForms, showLoginForm, showRegisterForm } from './forms/formHandlers.js';
 import { setupIdeaForm, setupIdeaList } from './utils/ui.js';
 import { addIdeaToList, addIdeaToTable, voteIdea, openModal, closeModal, acceptIdea, rejectIdea } from './ideaList.js';
@@ -16,20 +15,28 @@ initialize();
 window.showLoginForm = showLoginForm;
 window.showRegisterForm = showRegisterForm;
 window.changeLanguage = changeLanguage;
-window.showRegisterForm = showRegisterForm;
 
+// Initialize default language
+document.addEventListener('DOMContentLoaded', () => {
+    changeLanguage('en'); // Default language
+});
+
+// Additional global functions
 window.logout = () => {
     localStorage.removeItem('authToken'); // Or sessionStorage if using sessionStorage
     window.location.href = 'login.html';
 };
+
 window.showForm = () => {
     const formSection = document.getElementById('form-section');
     if (formSection) formSection.style.display = 'block';
 };
+
 window.closeCharts = () => {
     const chartsWindow = document.getElementById('chartsWindow');
     if (chartsWindow) chartsWindow.style.display = 'none';
 };
+
 window.sortIdeas = () => {
     const sortOption = document.getElementById('sort-options')?.value;
     const ideasList = Array.from(document.getElementById('ideas-list')?.children || []);
@@ -50,10 +57,12 @@ window.sortIdeas = () => {
         ideasList.forEach(idea => ideasContainer.appendChild(idea));
     }
 };
+
 window.showAllIdeas = () => {
     const ideas = document.querySelectorAll('.idea');
     ideas.forEach(idea => idea.style.display = 'block');
 };
+
 window.showCompletedIdeas = () => {
     const ideas = document.querySelectorAll('.idea');
     ideas.forEach(idea => {
@@ -61,6 +70,7 @@ window.showCompletedIdeas = () => {
         idea.style.display = (status === 'Completed') ? 'block' : 'none';
     });
 };
+
 window.showRejectedIdeas = () => {
     const ideas = document.querySelectorAll('.idea');
     ideas.forEach(idea => {
@@ -68,6 +78,7 @@ window.showRejectedIdeas = () => {
         idea.style.display = (status === 'Rejected') ? 'block' : 'none';
     });
 };
+
 window.showInProgresIdeas = () => {
     const ideas = document.querySelectorAll('.idea');
     ideas.forEach(idea => {
@@ -76,15 +87,13 @@ window.showInProgresIdeas = () => {
     });
 };
 
-window.showAllUser()
-{
+window.showAllUser = () => {
+    // Implement function if needed
+};
 
-}
-
-window.showTooAccept()//osoby do zaakceptowania
-{
-
-}
+window.showTooAccept = () => {
+    // Implement function if needed
+};
 
 window.voteIdea = voteIdea;
 window.openModal = openModal;
